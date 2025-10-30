@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erik Servicios - Soluciones Tecnológicas Inteligentes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* NAVIGATION */
+        nav {
+            background: linear-gradient(135deg, #002B5B 0%, #1A5F7A 100%);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05em;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #57A6C3;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #002B5B 0%, #1A5F7A 50%, #2B7A9B 100%);
+            color: white;
+            padding: 120px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(87, 166, 195, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(26, 95, 122, 0.2) 0%, transparent 50%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #57A6C3 0%, #2B7A9B 100%);
+            color: white;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 20px rgba(87, 166, 195, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(87, 166, 195, 0.6);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid white;
+            box-shadow: none;
+        }
+        
+        .cta-button.secondary:hover {
+            background: white;
+            color: #002B5B;
+        }
+        
+        /* SERVICES SECTION */
+        .services-section {
+            padding: 100px 40px;
+            background: #f8f9fa;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .section-header h2 {
+            font-size: 3em;
+            color: #002B5B;
+            margin-bottom: 20px;
+        }
+        
+        .section-header p {
+            font-size: 1.3em;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+        }
+        
+        .service-box {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #002B5B, #57A6C3);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+        
+        .service-box:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(26, 95, 122, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 4.5em;
+            margin-bottom: 25px;
+            display: block;
+        }
+        
+        .service-box h3 {
+            color: #002B5B;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        
+        .service-box p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .service-link {
+            display: inline-block;
+            color: #1A5F7A;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 12px 30px;
+            border: 2px solid #1A5F7A;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        
+        .service-link:hover {
+            background: #1A5F7A;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        /* WHY CHOOSE US */
+        .why-choose {
+            padding: 100px 40px;
+            background: white;
+        }
+        
+        .features-grid {
+            max-width: 1400px;
+            margin: 60px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            background: linear-gradient(135deg, #E8F4F8 0%, #f8f9fa 100%);
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .feature-card h4 {
+            color: #002B5B;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* STATS SECTION */
+        .stats-section {
+            background: linear-gradient(135deg, #002B5B 0%, #1A5F7A 100%);
+            padding: 80px 40px;
+            color: white;
+        }
+        
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: #57A6C3;
+        }
+        
+        .stat-item p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        /* CTA SECTION */
+        .cta-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, #E8F4F8 0%, #f8f9fa 100%);
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 3em;
+            color: #002B5B;
+            margin-bottom: 25px;
+        }
+        
+        .cta-content p {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        /* CONTACT INFO */
+        .contact-section {
+            background: #002B5B;
+            color: white;
+            padding: 80px 40px;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        
+        .contact-item a {
+            color: #57A6C3;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            color: white;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #0A1828;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #57A6C3;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero p {
+                font-size: 1.2em;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .services-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 2em;
+            }
+        }
+        
+        /* SMOOTH SCROLL */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">💻 Erik Servicios</div>
+            <ul class="nav-links">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">¿Por qué elegirnos?</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Soluciones Tecnológicas Inteligentes</h1>
+            <p>Transformamos tu negocio con servicios técnicos profesionales, automatización con IA y gestión digital avanzada. Tu tecnología en manos expertas.</p>
+            <div class="cta-buttons">
+                <a href="#servicios" class="cta-button">Ver servicios</a>
+                <a href="#contacto" class="cta-button secondary">Contáctame</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="servicios" class="services-section">
+        <div class="section-header">
+            <h2>Nuestros Servicios</h2>
+            <p>Soluciones completas para todas tus necesidades tecnológicas</p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Servicios Técnicos -->
+            <div class="service-box">
+                <span class="service-icon">🔧</span>
+                <h3>Servicios Técnicos</h3>
+                <p>Mantenimiento, reparación, redes, recuperación de datos y soluciones en la nube. Soporte profesional con garantía incluida.</p>
+                <a href="servicios_tecnicos.html" class="service-link">Ver catálogo completo →</a>
+            </div>
+            
+            <!-- Automatización IA -->
+            <div class="service-box">
+                <span class="service-icon">🤖</span>
+                <h3>Automatización con IA</h3>
+                <p>Chatbots inteligentes, automatización de procesos, reportes automáticos y soluciones personalizadas con inteligencia artificial.</p>
+                <a href="catalogo_ia_automatizacion.html" class="service-link">Ver catálogo completo →</a>
+            </div>
+            
+            <!-- Linko -->
+            <div class="service-box">
+                <span class="service-icon">🔗</span>
+                <h3>Linko - Gestión de Enlaces</h3>
+                <p>Centraliza tu presencia digital. Planes desde $80/mes con verificación, personalización total y prueba gratuita de 7 días.</p>
+                <a href="catalogo_linkstack_bio.html" class="service-link">Ver planes →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="nosotros" class="why-choose">
+        <div class="section-header">
+            <h2>¿Por qué elegirnos?</h2>
+            <p>Compromiso, experiencia y resultados garantizados</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🛡️</span>
+                <h4>Garantía incluida</h4>
+                <p>Respaldamos todos nuestros trabajos con garantía de satisfacción</p>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <h4>Servicio rápido</h4>
+                <p>Atención ágil y profesional cuando más lo necesitas</p>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">🎯</span>
+                <h4>Experiencia comprobada</h4>
+                <p>Años de trayectoria solucionando problemas tecnológicos</p>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">💰</span>
+                <h4>Precios justos</h4>
+                <p>Nos adaptamos a tu presupuesto sin comprometer calidad</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>Clientes satisfechos</p>
+            </div>
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Servicios realizados</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Garantía de satisfacción</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>¿Listo para transformar tu negocio?</h2>
+            <p>Contáctame hoy y descubre cómo puedo ayudarte a optimizar tu tecnología y procesos digitales</p>
+            <a href="#contacto" class="cta-button">Comenzar ahora</a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>📞 Información de contacto</h3>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>WhatsApp: [Tu número]</span>
+                </div>
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:erik.cano@erikservicios.click">erik.cano@erikservicios.click</a>
+                </div>
+                <div class="contact-item">
+                    <span>🌐</span>
+                    <a href="https://linko.erikservicios.click/@Erik_Cano" target="_blank">https://linko.erikservicios.click/@Erik_Cano</a>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>📍 Ubicación y horarios</h3>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Guadalajara, Jalisco, México</span>
+                </div>
+                <div class="contact-item">
+                    <span>🕐</span>
+                    <span>Viernes a domingo</span>
+                </div>
+                <div class="contact-item">
+                    <span>⏰</span>
+                    <span>9:00 am - 10:00 pm</span>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>🚀 Servicios destacados</h3>
+                <div class="contact-item">
+                    <span>✓</span>
+                    <span>Servicio a domicilio (ZMG)</span>
+                </div>
+                <div class="contact-item">
+                    <span>✓</span>
+                    <span>Soporte remoto</span>
+                </div>
+                <div class="contact-item">
+                    <span>✓</span>
+                    <span>Horarios flexibles</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Erik Servicios. Todos los derechos reservados.</p>
+        <p>Soluciones Tecnológicas Inteligentes</p>
+        <div class="footer-links">
+            <a href="servicios_tecnicos.html">Servicios Técnicos</a>
+            <a href="catalogo_ia_automatizacion.html">Automatización IA</a>
+            <a href="catalogo_linkstack_bio.html">Linko</a>
+        </div>
+    </footer>
+</body>
+</html>
