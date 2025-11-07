@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WRT5JW6V');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Basic -->
+    <title>Contacto - Erik Servicios | Solicita tu Cotización</title>
+    <meta name="description" content="Contáctanos para servicios técnicos, automatización con IA y gestión de enlaces en Guadalajara. Respuesta rápida garantizada.">
+    <meta name="keywords" content="contacto erik servicios, cotización servicios técnicos, soporte guadalajara">
+    <meta name="author" content="Erik Cano - Erik Servicios">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://erikservicios.click/contacto.html">
+    <meta property="og:title" content="Contacto - Erik Servicios">
+    <meta property="og:description" content="Solicita tu cotización. Respuesta rápida y profesional.">
+    <meta property="og:image" content="https://erikservicios.click/images/logo.png">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://erikservicios.click/contacto.html">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: linear-gradient(135deg, #E8F4F8 0%, #f8f9fa 100%);
+            min-height: 100vh;
+        }
+        
+        /* NAVIGATION */
+        nav {
+            background: linear-gradient(135deg, #002B5B 0%, #1A5F7A 100%);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 105px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05em;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #57A6C3;
+        }
+        
+        /* HAMBURGER MENU */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        
+        /* FLOATING WHATSAPP BUTTON */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            text-decoration: none;
+            transition: all 0.3s;
+            animation: pulse-whatsapp 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+        
+        @keyframes pulse-whatsapp {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* BACK TO TOP BUTTON */
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: linear-gradient(135deg, #002B5B 0%, #1A5F7A 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            box-shadow: 0 4px 15px rgba(0, 43, 91, 0.3);
+            z-index: 998;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0, 43, 91, 0.5);
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #002B5B 0%, #1A5F7A 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* CONTACT SECTION */
+        .contact-section {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        /* INFO CARDS */
+        .info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(26, 95, 122, 0.15);
+        }
+        
+        .info-card h3 {
+            color: #002B5B;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+        
+        .info-icon {
+            font-size: 1.5em;
+        }
+        
+        /* FORM CONTAINER */
+        .form-container {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .form-container h2 {
+            color: #002B5B;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+        
+        .form-subtitle {
+            color: #666;
+            margin-bottom: 35px;
+            font-size: 1.1em;
+        }
+        
+        /* FORM STYLES */
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #002B5B;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        
+        .required {
+            color: #EA4335;
+        }
+        
+        .input-wrapper {
+            position: relative;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #1A5F7A;
+            font-size: 1.2em;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: all 0.3s;
+            background: #f8f9fa;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+            padding-top: 15px;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1A5F7A;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(26, 95, 122, 0.1);
+        }
+        
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: #EA4335;
+        }
+        
+        .error-message {
+            color: #EA4335;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .form-group.error .error-message {
+            display: block;
+        }
+        
+        .success-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #25D366;
+            font-size: 1.3em;
+            display: none;
+        }
+        
+        .form-group.success .success-icon {
+            display: block;
+        }
+        
+        /* CHECKBOX */
+        .checkbox-group {
+            display: flex;
+            align-items: start;
+            gap: 10px;
+            margin: 25px 0;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+        
+        .checkbox-group label {
+            color: #666;
+            font-weight: normal;
+            font-size: 0.95em;
+            line-height: 1.5;
+            cursor: pointer;
+        }
+        
+        .checkbox-group a {
+            color: #1A5F7A;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+        
+        /* BUTTONS */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .submit-btn {
+            flex: 1;
+            padding: 18px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+        }
+        
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+        }
+        
+        .btn-email {
+            background: linear-gradient(135deg, #EA4335 0%, #C5221F 100%);
+            color: white;
+            box-shadow: 0 5px 20px rgba(234, 67, 53, 0.3);
+        }
+        
+        .btn-email:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(234, 67, 53, 0.5);
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        .btn-icon {
+            font-size: 1.3em;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #0A1828;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #57A6C3;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        /* MOBILE */
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .form-container {
+                padding: 35px 25px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, #002B5B 0%, #1A5F7A 100%);
+                flex-direction: column;
+                padding: 20px;
+                gap: 0;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .logo img {
+                height: 82px;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 1.8em;
+            }
+            
+            .back-to-top {
+                bottom: 85px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        /* SMOOTH SCROLL */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRT5JW6V"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/523326506405?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20tus%20servicios" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="white">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.824.737 5.481 2.028 7.788L0 32l8.424-2.016A15.938 15.938 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.44A13.422 13.422 0 0 1 8.88 27.2l-.488-.292-5.064 1.212 1.236-4.948-.328-.52A13.376 13.376 0 0 1 2.56 16c0-7.392 6.008-13.44 13.44-13.44S29.44 8.608 29.44 16 23.392 29.44 16 29.44zm7.356-9.996c-.404-.2-2.384-1.176-2.752-1.312-.368-.132-.636-.2-.904.2-.268.404-1.04 1.312-1.276 1.58-.232.268-.468.3-.872.1-.404-.2-1.704-.628-3.244-2.004-1.2-1.068-2.008-2.388-2.244-2.792-.232-.404-.024-.624.176-.824.18-.18.404-.468.604-.704.2-.232.268-.404.404-.672.132-.268.068-.5-.032-.704-.1-.2-.904-2.176-1.24-2.98-.328-.78-.66-.672-.904-.684-.232-.012-.5-.012-.768-.012s-.704.1-1.072.5c-.368.404-1.404 1.376-1.404 3.352s1.436 3.888 1.636 4.156c.2.268 2.824 4.312 6.844 6.048.956.416 1.704.664 2.288.848.96.304 1.836.26 2.528.156.772-.116 2.384-.976 2.72-1.916.336-.94.336-1.748.236-1.916-.1-.168-.368-.268-.772-.468z"/>
+        </svg>
+    </a>
+
+    <!-- BACK TO TOP BUTTON -->
+    <div class="back-to-top" id="backToTop" title="Volver arriba">
+        ↑
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Erik Servicios Logo">
+                Erik Servicios
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#testimonios">Testimonios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>📞 Contáctanos</h1>
+        <p>Estamos listos para ayudarte. Llena el formulario y te responderemos lo más pronto posible.</p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="contact-grid">
+            <!-- INFO CARDS -->
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3><span class="info-icon">📍</span> Ubicación</h3>
+                    <p>Guadalajara, Jalisco, México<br>
+                    Zona Metropolitana de Guadalajara</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3><span class="info-icon">🗓️</span> Horario</h3>
+                    <p><strong>Días:</strong> Viernes a Domingo<br>
+                    <strong>Horario:</strong> 9:00 am - 10:00 pm</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3><span class="info-icon">⚡</span> Respuesta rápida</h3>
+                    <p>Normalmente respondemos en menos de 1 hora durante nuestro horario de servicio.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3><span class="info-icon">🚀</span> Servicios</h3>
+                    <p>✔ Servicio a domicilio (ZMG)<br>
+                    ✔ Soporte remoto<br>
+                    ✔ Horarios flexibles<br>
+                    ✔ Garantía incluida</p>
+                </div>
+            </div>
+
+            <!-- FORM -->
+            <div class="form-container">
+                <h2>Solicita tu Cotización</h2>
+                <p class="form-subtitle">Completa el formulario y elige cómo quieres contactarnos</p>
+                
+                <form id="contactForm">
+                    <!-- Nombre -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">👤</span>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                            <span class="success-icon">✓</span>
+                        </div>
+                        <span class="error-message">Por favor ingresa tu nombre</span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Correo electrónico <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">📧</span>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            <span class="success-icon">✓</span>
+                        </div>
+                        <span class="error-message">Por favor ingresa un email válido</span>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="form-group">
+                        <label for="telefono">Teléfono <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">📱</span>
+                            <input type="tel" id="telefono" name="telefono" placeholder="33 1234 5678" required>
+                            <span class="success-icon">✓</span>
+                        </div>
+                        <span class="error-message">Por favor ingresa tu teléfono</span>
+                    </div>
+
+                    <!-- Servicio -->
+                    <div class="form-group">
+                        <label for="servicio">Servicio de interés <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔧</span>
+                            <select id="servicio" name="servicio" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="Servicios Técnicos">🔧 Servicios Técnicos</option>
+                                <option value="Automatización con IA">🤖 Automatización con IA</option>
+                                <option value="Linko - Gestión de Enlaces">🔗 Linko - Gestión de Enlaces</option>
+                                <option value="Consultoría">💼 Consultoría</option>
+                                <option value="Otro">❓ Otro</option>
+                            </select>
+                            <span class="success-icon">✓</span>
+                        </div>
+                        <span class="error-message">Por favor selecciona un servicio</span>
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <span class="input-icon" style="top: 20px;">💬</span>
+                            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos qué necesitas..." required></textarea>
+                            <span class="success-icon" style="top: 20px;">✓</span>
+                        </div>
+                        <span class="error-message">Por favor escribe tu mensaje</span>
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            Acepto los <a href="#">términos y condiciones</a> y la <a href="#">política de privacidad</a>
+                        </label>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="button-group">
+                        <button type="button" class="submit-btn btn-whatsapp" id="btnWhatsApp">
+                            <span class="btn-icon">📱</span>
+                            Enviar por WhatsApp
+                        </button>
+                        <button type="button" class="submit-btn btn-email" id="btnEmail">
+                            <span class="btn-icon">📧</span>
+                            Enviar por Email
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Erik Servicios. Todos los derechos reservados.</p>
+        <p>Soluciones Tecnológicas Inteligentes en Guadalajara, Jalisco</p>
+        <div class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="servicios_tecnicos.html">Servicios Técnicos</a>
+            <a href="catalogo_ia_automatizacion.html">Automatización IA</a>
+            <a href="catalogo_linko_bio.html">Linko</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // FORM VALIDATION
+        const form = document.getElementById('contactForm');
+        const nombre = document.getElementById('nombre');
+        const email = document.getElementById('email');
+        const telefono = document.getElementById('telefono');
+        const servicio = document.getElementById('servicio');
+        const mensaje = document.getElementById('mensaje');
+        const terms = document.getElementById('terms');
+        const btnWhatsApp = document.getElementById('btnWhatsApp');
+        const btnEmail = document.getElementById('btnEmail');
+
+        // Validation functions
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function validatePhone(phone) {
+            const re = /^[\d\s\-\+\(\)]{8,}$/;
+            return re.test(phone);
+        }
+
+        function validateField(field) {
+            const parent = field.parentElement.parentElement;
+            
+            if (field.type === 'email') {
+                if (!field.value.trim() || !validateEmail(field.value)) {
+                    parent.classList.add('error');
+                    parent.classList.remove('success');
+                    return false;
+                }
+            } else if (field.type === 'tel') {
+                if (!field.value.trim() || !validatePhone(field.value)) {
+                    parent.classList.add('error');
+                    parent.classList.remove('success');
+                    return false;
+                }
+            } else if (field.tagName === 'SELECT') {
+                if (!field.value) {
+                    parent.classList.add('error');
+                    parent.classList.remove('success');
+                    return false;
+                }
+            } else {
+                if (!field.value.trim()) {
+                    parent.classList.add('error');
+                    parent.classList.remove('success');
+                    return false;
+                }
+            }
+            
+            parent.classList.remove('error');
+            parent.classList.add('success');
+            return true;
+        }
+
+        // Real-time validation
+        [nombre, email, telefono, servicio, mensaje].forEach(field => {
+            field.addEventListener('blur', () => validateField(field));
+            field.addEventListener('input', () => {
+                if (field.value.trim()) {
+                    validateField(field);
+                }
+            });
+        });
+
+        // Check if form is valid
+        function isFormValid() {
+            const isNombreValid = validateField(nombre);
+            const isEmailValid = validateField(email);
+            const isTelefonoValid = validateField(telefono);
+            const isServicioValid = validateField(servicio);
+            const isMensajeValid = validateField(mensaje);
+            const isTermsChecked = terms.checked;
+
+            return isNombreValid && isEmailValid && isTelefonoValid && 
+                   isServicioValid && isMensajeValid && isTermsChecked;
+        }
+
+        // Update button states
+        function updateButtonStates() {
+            const isValid = isFormValid();
+            btnWhatsApp.disabled = !isValid;
+            btnEmail.disabled = !isValid;
+        }
+
+        // Listen to all inputs
+        [nombre, email, telefono, servicio, mensaje, terms].forEach(field => {
+            field.addEventListener('input', updateButtonStates);
+            field.addEventListener('change', updateButtonStates);
+        });
+
+        // Build message
+        function buildMessage() {
+            return `*Nuevo contacto desde el formulario*
+
+*Nombre:* ${nombre.value.trim()}
+*Email:* ${email.value.trim()}
+*Teléfono:* ${telefono.value.trim()}
+*Servicio:* ${servicio.value}
+
+*Mensaje:*
+${mensaje.value.trim()}`;
+        }
+
+        // WhatsApp Submit
+        btnWhatsApp.addEventListener('click', () => {
+            if (!isFormValid()) {
+                alert('Por favor completa todos los campos correctamente');
+                return;
+            }
+
+            const message = buildMessage();
+            const whatsappNumber = '523326506405';
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+            
+            // Reset form after a delay
+            setTimeout(() => {
+                form.reset();
+                document.querySelectorAll('.form-group').forEach(group => {
+                    group.classList.remove('success', 'error');
+                });
+                updateButtonStates();
+            }, 1000);
+        });
+
+        // Email Submit
+        btnEmail.addEventListener('click', () => {
+            if (!isFormValid()) {
+                alert('Por favor completa todos los campos correctamente');
+                return;
+            }
+
+            const subject = `Solicitud de ${servicio.value} - ${nombre.value}`;
+            const body = buildMessage();
+            const mailtoUrl = `mailto:erik.cano@erikservicios.click?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            window.location.href = mailtoUrl;
+            
+            // Reset form after a delay
+            setTimeout(() => {
+                form.reset();
+                document.querySelectorAll('.form-group').forEach(group => {
+                    group.classList.remove('success', 'error');
+                });
+                updateButtonStates();
+            }, 1000);
+        });
+
+        // Initial button state
+        updateButtonStates();
+    </script>
+</body>
+</html>
